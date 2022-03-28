@@ -1,0 +1,92 @@
+body{
+    /* text-align: center; */
+    background-image: url(/images/background.jpg);
+    
+    margin: 0;
+    font-family: sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: fixed; */
+}
+
+#contacts{
+
+background-image: url(/images/contactBackground.jpg);
+opacity: 0.75;
+text-align: center;
+/* background-position: contain; */
+width: 60vw;
+
+margin-left: 20vw;
+border-radius: 10px;
+padding: 20px;
+
+
+}
+#pageHeading{
+    text-align: center;
+   background-image: url(/images/header.jpg);
+   background-size: cover;
+    color:  rgb(0, 0, 0);
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    height: 10vh;
+}
+#delete{
+    margin: 0;
+}
+
+
+#contactList{
+    background-color: aqua;
+    display: flex;
+    margin: 20px 30px;
+    justify-content: space-between;
+    border-radius: 10px;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    
+}
+p{
+    margin-left: 10px;
+}
+#contactList:hover{
+    background-color: beige;
+}
+li{
+    list-style-type: none;
+}
+input{
+    
+    border: 0vh;
+    border-radius: 5px;
+    border-bottom: 2px solid grey;
+}
+button{
+    background-color: black;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+
+}
+form{
+    display: flex;
+    justify-content: space-around;
+
+}
+button:hover{
+   color: black;
+   /* font-weight: 600; */
+    background-color: rgb(255, 186, 58);
+}
+#phone{
+    color: rgb(54, 50, 50);
+    margin: 0px 20px ;
+    
+}
+#phone:hover{
+    color: rgb(4, 131, 68);
+}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= locals.title %></title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <h1 id="pageHeading">
+      <i class="fa-solid fa-address-book"></i> Contact List
+    </h1>
+    <div id="contacts">
+      <div>
+        <ul>
+          <% for (let i of contact_list){ %>
+          <li class="details">
+            <div id="contactList">
+              <p><%= i.name %></p>
+              <p>
+                <%= i.phone %> <i id="phone" class="fa-solid fa-phone"></i>
+                <span class="delete-button">
+                  <a href="/delete-contact/?id=<%= i._id%>&name=<%= i.name%>">
+                    <i id="delete" class="fa-solid fa-user-minus"></i>
+                  </a>
+                </span>
+              </p>
+            </div>
+          </li>
+          <% }%>
+        </ul>
+      </div>
+      <form action="/create-contact" method="POST">
+        <input type="text" name="name" placeholder="Enter Name" required />
+        <input type="number" name="phone" placeholder="Enter Phone" required />
+        <button type="submit">Add Contact</button>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="/js/home.js"></script>
+  </body>
+</html>
